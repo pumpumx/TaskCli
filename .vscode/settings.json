@@ -1,0 +1,7 @@
+{
+    "editor.lineNumbers": "relative",
+    "files.associations": {
+        "string": "cpp",
+        "format": "cpp"
+    }
+}
