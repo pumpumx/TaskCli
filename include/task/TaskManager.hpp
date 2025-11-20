@@ -1,15 +1,23 @@
+#pragma once
+#include <memory>
+#include <vector>
 #include <string>
 
-class Task
+namespace task
 {
-private:
-    int id_;
-    std::string title_;
-    bool isCompleted;
+    class Task;
+    class TaskManager
+    {
+    public:
+        TaskManager();
+        void addTask(const std::string &title);
+        bool removeTask(const int id);
+        bool completeTask(const int id);
 
-public:
-    Task(int id, std::string title, bool completed = false);
-    int getId() const noexcept { return id_;};  
-    void addTitle() const noexcept {return title_;};
+        std::vector<Task> listTasks()const;
 
-};
+    private:
+        std::vector<std::unique_ptr<Task>> tasks_;
+        int nextId_;
+    };
+} //namespace task

@@ -2,6 +2,10 @@
     "editor.lineNumbers": "relative",
     "files.associations": {
         "string": "cpp",
-        "format": "cpp"
+        "format": "cpp",
+        "algorithm": "cpp",
+        "iostream": "cpp",
+        "vector": "cpp",
+        "memory": "cpp"
     }
 }
